@@ -7,3 +7,8 @@ $route->error404('test/error.php'); // Adding 404 Error Page
 $route->init(); // Starting the routing
  
 ?>
+
+This plugin can be embedded in PHP application to give the web application specific routes/href location
+https://github.com/teddyoweh/Routes-Plugin-PHP
+
+#php #backenddeveloper #programming #plugins #Python #pythonprogramming 
