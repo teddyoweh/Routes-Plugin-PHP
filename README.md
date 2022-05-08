@@ -27,6 +27,9 @@ $route->init(); // Starting the routing
  
 ?>
 ```
+```sh
+php -S localhost:8000
+```
 ### Moving Plugin
 ```sh
  cp routes.php /new_directory
