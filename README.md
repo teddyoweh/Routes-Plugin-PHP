@@ -27,6 +27,7 @@ $route->init(); // Starting the routing
  
 ?>
 ```
+#### Starting Test Server
 ```sh
 php -S localhost:8000
 ```
