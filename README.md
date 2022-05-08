@@ -5,7 +5,7 @@ Routing Plugin used for entering specific/locations for each page in a web appli
 ```PHP
 $route = new Route()// // Initializing Routing Plugin
 $route->add($path,$file); // Assigning and Adding Routes/Location to a file for the Web Application;
-$route->error404($file4040); Adding Page Not Found Route
+$route->error404($file4040); // Adding Page Not Found Route
 ```
 # Testing
 ```PHP
