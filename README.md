@@ -7,7 +7,15 @@ $route = new Route()// // Initializing Routing Plugin
 $route->add($path,$file); // Assigning and Adding Routes/Location to a file for the Web Application;
 $route->error404($file4040); // Adding Page Not Found Route
 ```
-# Testing
+
+# Installation
+```sh
+git clone https://github.com/teddyoweh/Routes-Plugin-PHP.git
+```
+```sh
+cd Routes-Plugin-PHP
+```
+### Testing
 ```PHP
 <?php
 $route = new Route();
@@ -19,7 +27,10 @@ $route->init(); // Starting the routing
  
 ?>
 ```
-
+### Moving Plugin
+```sh
+ cp routes.php /new_directory 
+```
 License
 ----
 
