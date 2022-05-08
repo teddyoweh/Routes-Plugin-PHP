@@ -29,7 +29,7 @@ $route->init(); // Starting the routing
 ```
 ### Moving Plugin
 ```sh
- cp routes.php /new_directory 
+ cp routes.php /new_directory
 ```
 License
 ----
