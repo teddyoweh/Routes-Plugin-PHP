@@ -29,10 +29,10 @@ class Route{
         
         }
         if(in_array($_SERVER['PATH_INFO'],$this->routes)){ // If the current location of the website is no in the dictionary
-            if(strlen($this->notfound)!==0) {
-                include $this->notfound;
+            if(strlen($this->notfound)!==0) { 
+                include $this->notfound; // A
             }else{
-                echo 'Error 404 page not found';
+                echo 'Page not found'; // Echo the message Page not found on the website if the error404 function as not initialized 
             }
         }
     }
