@@ -1,4 +1,4 @@
-# ROUTES-PHP-PLUGIN
+# Routes Plugin PHP
 Routing Plugin used for entering specific/locations for each page in a web application.
 
 # Usage
