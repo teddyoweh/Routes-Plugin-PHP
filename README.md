@@ -1,5 +1,5 @@
 # Routes Plugin PHP
-Routing Plugin used for entering specific/locations for each page in a web application.
+This plugin can be embedded in PHP application to give the web application specific routes/href location and for entering specific/locations for each page in a web application
 
 # Usage
 ```PHP
