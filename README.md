@@ -4,13 +4,29 @@ This plugin can be embedded in PHP application to give the web application speci
 # Usage
 
 ```PHP
-$route = new Route()// // Initializing Routing Plugin
-$route->add($path,$file); // Assigning and Adding Routes/Location to a file for the Web Application;
-$route->error404($file4040); // Adding Page Not Found Route
-$route->addscripts('script.js'); // Loading Script Files
-$route->addstylesheets('style.scss'); // Loading Stylesheets
-$route->loadbootstrap('local'); // Loading Bootstrap css 
-$route->loadpyscripts('local'); // Loading Pyscripts
+<?php
+require('./controller/routes/routes.php');
+$route = new Route(); 
+
+// Stylesheets and scripts
+$route->addscripts('script.js');
+$route->addstylesheets('style.scss');
+$route->loadbootstrap('local');
+$route->loadpyscripts('local');
+
+// Routings
+
+// Basic Pages
+$route->homepage('home.php'); // Adding Home Page
+$route->error404('error404.php'); // Adding 404 Error Page
+
+// Other Pages
+$route->add('/users','users.php');
+$route->add('/register','reg.php');
+$route->init(); // Starting the routing
+
+?>
+
 ```
 ## Pages
 All the pages are located in ``` ./controller/pages```
