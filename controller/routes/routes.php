@@ -10,6 +10,7 @@ class Route{
     private $pages = './controller/pages/';
     private $styleslocation = './controller/pages/styles/';
     private $scriptlocation = './controller/pages/scripts/';
+    private $scriptjquerylocation = './controller/pages/scripts/static/jquery/';
     private $stylesstaticlocation = './controller/pages/styles/static/';
     private $scriptstaticlocation = './controller/pages/scripts/static/';
     
@@ -81,6 +82,24 @@ class Route{
             foreach ($botdir as $key => $value) {
                 if($value != '.' or '..'){
                     echo "<link rel='stylesheet' href='$this->fontawesomestylelocation/$value' />";
+                } 
+            }
+            
+        }
+    }
+    public function loadjquery($loca){ // Adding Scripts Function
+        if ($loca == 'web'){
+            echo '
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            
+            ';
+
+        }else if ($loca == 'local'){
+            $botdir = scandir($this->$scriptjquerylocation);
+           
+            foreach ($botdir as $key => $value) {
+                if($value != '.' or '..'){
+                    echo "<script src='$this->$scriptjquerylocation/$value></script>"
                 } 
             }
             
