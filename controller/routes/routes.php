@@ -66,36 +66,24 @@ class Route{
                     echo "  <script defer src='$this->bootstrapscriptlocation/$value1'></script>";
                 } 
             }
-            echo "
-        
-            <script defer src='$this->bootstrapscriptlocation'></script>
-            ";
+            
         }
     }
     public function loadfontawesome($loca){ // Adding Scripts Function
         if ($loca == 'web'){
             echo '
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            
             ';
 
         }else if ($loca == 'local'){#yi
             $botdir = scandir($this->fontawesomestylelocation);
             foreach ($botdir as $key => $value) {
                 if($value != '.' or '..'){
-                    echo "<link rel='stylesheet' href='$this->bootstrapstylelocation/$value' />";
+                    echo "<link rel='stylesheet' href='$this->fontawesomestylelocation/$value' />";
                 } 
             }
-            $botdir1 = scandir($this->bootstrapscriptlocation);
-            foreach ($botdir1 as $key1 => $value1) {
-                if($value1 != '.' or '..'){
-                    echo "  <script defer src='$this->bootstrapscriptlocation/$value1'></script>";
-                } 
-            }
-            echo "
-        
-            <script defer src='$this->bootstrapscriptlocation'></script>
-            ";
+            
         }
     }
     public function addscripts($script){ // Adding Scripts Function
