@@ -12,6 +12,7 @@ $route->addstylesheets('style.scss');
 $route->loadbootstrap('local');
 $route->loadpyscripts('local');
 $route->loadfontawesome('web');
+$route->loadjquery('local');
 
 // Routings
 
