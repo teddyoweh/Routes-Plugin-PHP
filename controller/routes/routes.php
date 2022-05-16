@@ -22,7 +22,7 @@ class Route{
 
     public function add(string $location,string $file){ // Adding Routes Function 
 
-        $this->routes[$location] = $this->$pages.$file; // Assigning routes and pages ( files ) as key and item in a dictionary
+        $this->routes[$location] = $this->pages.$file; // Assigning routes and pages ( files ) as key and item in a dictionary
 
     }
     public function error404($notfoundpath){ // Not Found ( Error 404 ) Function
@@ -78,7 +78,7 @@ class Route{
             ';
 
         }else if ($loca == 'local'){
-            $botdir = scandir($this->$boxiconsstylelocation);
+            $botdir = scandir($this->boxiconsstylelocation);
             foreach ($botdir as $key => $value) {
                 if($value != '.' or '..'){
                     echo "<link rel='stylesheet' href='$this->boxiconsstylelocation/$value' />";
@@ -113,11 +113,11 @@ class Route{
             ';
 
         }else if ($loca == 'local'){
-            $botdir = scandir($this->$scriptjquerylocation);
+            $botdir = scandir($this->scriptjquerylocation);
            
             foreach ($botdir as $key => $value) {
                 if($value != '.' or '..'){
-                    echo "<script src='$this->$scriptjquerylocation/$value></script>"
+                    echo "<script src='$this->scriptjquerylocation/$value></script>";
                 } 
             }
             
@@ -126,21 +126,22 @@ class Route{
     public function addscripts($script){ // Adding Scripts Function
         echo "<script src='$this->scriptlocation$script'></script> "; // Assigning the script src to the scripts file location/
     }
-    public function homepage($homepage){ // Not Found ( Error 404 ) Function
+    public function homepage($homepage1){ // Not Found ( Error 404 ) Function
         
-        $this->$homepage= $homepage; //Error404 Assigning the notfound path variable to a page 
+        $this->homepage= $homepage1; //Error404 Assigning the notfound path variable to a page 
+        $this->routes['/'] = $homepage1;
+        $this->routes[''] = $homepage1;
 
     }
     public function init()  // initializing all the routes
     {
-    
+         
+        
         foreach ($this->routes as $path => $content) {  // Reading the Dictionary off all routes and the pages ( file )
-            if($_SERVER['PATH_INFO'] == ''or '/'){
-                include $this->$pages.$this->$homepage;
-            }
-            else if ($path == $_SERVER['PATH_INFO']) { // If the path in the dictionary is the current location of the website
+           
+            if ($path == $_SERVER['PATH_INFO']) { // If the path in the dictionary is the current location of the website
                 
-               include $this->$pages.$content; // Including the file assigned to the path 
+               include $content; // Including the file assigned to the path 
                  
             } 
                
@@ -148,7 +149,7 @@ class Route{
         }
         if(in_array($_SERVER['PATH_INFO'],$this->routes)){ // If the current location of the website is no in the dictionary
             if(strlen($this->notfound)!==0) { 
-                include $this->$pages.$this->notfound; // Assigning the not found page to a file
+                include $this->pages.$this->notfound; // Assigning the not found page to a file
             }else{
                 echo 'Page not found'; // Echo the message Page not found on the website if the error404 function as not initialized 
             }
