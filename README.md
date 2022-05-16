@@ -22,11 +22,11 @@ All the scripts are located in ``` ./controller/scripts/```
 All the pages are located in ``` ./controller/styles/```
 
 ## Extracomponents
-[Bootstrap](https://getbootstrap.com/)
-[Boxicon](https://boxicons.com/)
-[Jquery](https://jquery.com/)
-[FontAwesome-Icons](https://fontawesome.com/)
-[PyScript](https://pyscript.net/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Boxicon](https://boxicons.com/)
+- [Jquery](https://jquery.com/)
+- [FontAwesome-Icons](https://fontawesome.com/)
+- [PyScript](https://pyscript.net/)
 # Installation
 ```sh
 git clone https://github.com/teddyoweh/Routes-Plugin-PHP.git
