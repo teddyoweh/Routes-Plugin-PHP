@@ -2,12 +2,59 @@
 This plugin can be embedded in PHP application to give the web application specific routes/href location and for entering specific/locations for each page in a web application
 
 # Usage
-```PHP
-$route = new Route()// // Initializing Routing Plugin
-$route->add($path,$file); // Assigning and Adding Routes/Location to a file for the Web Application;
-$route->error404($file4040); // Adding Page Not Found Route
-```
 
+## Startup
+```PHP
+<?php
+require('./controller/routes/routes.php');
+$route = new Route(); 
+```
+## Stylesheets and scripts
+```PHP
+$route->addscripts('script.js');
+$route->addstylesheets('style.scss');
+``` 
+ 
+## Routings
+```PHP
+// Basic Pages
+$route->homepage('home.php'); // Adding Home Page
+$route->error404('error404.php'); // Adding 404 Error Page
+
+// Other Pages
+$route->add('/users','users.php');
+$route->add('/register','reg.php');
+$route->init(); // Starting the routing
+
+?>
+
+```
+## Pages
+All the pages are located in ``` ./controller/pages```
+
+## Scripts
+All the scripts are located in ``` ./controller/scripts/```
+
+## Stylesheets
+All the pages are located in ``` ./controller/styles/```
+
+## Extracomponents
+- [Bootstrap](https://getbootstrap.com/)
+- [Boxicon](https://boxicons.com/)
+- [Jquery](https://jquery.com/)
+- [FontAwesome-Icons](https://fontawesome.com/)
+- [PyScript](https://pyscript.net/)
+
+There are two args when loading the extracomponents:
+- ```local``` Located in the Local Computer
+- ```web``` Sourced directly from the web
+```PHP
+<?php
+
+$route->loadbootstrap('local');
+$route->loadpyscripts('local');
+
+```
 # Installation
 ```sh
 git clone https://github.com/teddyoweh/Routes-Plugin-PHP.git
@@ -18,14 +65,30 @@ cd Routes-Plugin-PHP
 ### Testing
 ```PHP
 <?php
-$route = new Route();
-$route->add('/','test/app.php'); // Home Page
-$route->add('/users','test/users.php'); // Adding /users to the route
-$route->add('/register','test/reg.php'); // Adding /register to the route
-$route->error404('test/error.php'); // Adding 404 Error Page
+require('./controller/routes/routes.php');
+$route = new Route(); 
+
+// Stylesheets and scripts
+$route->addscripts('script.js');
+$route->addstylesheets('style.scss');
+$route->loadbootstrap('local');
+$route->loadpyscripts('local');
+
+// Routings
+
+// Basic Pages
+$route->homepage('home.php'); // Adding Home Page
+$route->error404('error404.php'); // Adding 404 Error Page
+
+// Other Pages
+$route->add('/users','users.php');
+$route->add('/register','reg.php');
 $route->init(); // Starting the routing
- 
+
+
+
 ?>
+ 
 ```
 #### Starting Test Server
 ```sh
