@@ -13,6 +13,7 @@ $route->loadbootstrap('local');
 $route->loadpyscripts('local');
 $route->loadfontawesome('web');
 $route->loadjquery('local');
+$route->loadboxicon('web');
 
 // Routings
 

@@ -1,0 +1,2 @@
+https://github.com/teddyoweh/Routes-Plugin-PHP/archive/refs/heads/main.zip
+powershell -c "Invoke-WebRequest -Uri 'https://github.com/teddyoweh/Routes-Plugin-PHP/archive/refs/heads/main.zip' -OutFile './file.zip'"
