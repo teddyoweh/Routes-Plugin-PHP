@@ -128,9 +128,9 @@ class Route{
     }
     public function homepage($homepage1){ // Not Found ( Error 404 ) Function
         
-        $this->homepage= $homepage1; //Error404 Assigning the notfound path variable to a page 
-        $this->routes['/'] = $homepage1;
-        $this->routes[''] = $homepage1;
+        $this->homepage= $this->pages.$homepage1; //Error404 Assigning the notfound path variable to a page 
+        $this->routes['/'] = $this->homepage;
+        $this->routes[''] =$this->homepage;
 
     }
     public function init()  // initializing all the routes
@@ -149,7 +149,7 @@ class Route{
         }
         if(in_array($_SERVER['PATH_INFO'],$this->routes)){ // If the current location of the website is no in the dictionary
             if(strlen($this->notfound)!==0) { 
-                include $this->pages.$this->notfound; // Assigning the not found page to a file.
+                include $this->pages.$this->notfound; // Assigning the not found page to a file
             }else{
                 echo 'Page not found'; // Echo the message Page not found on the website if the error404 function as not initialized 
             }
@@ -160,4 +160,4 @@ class Route{
 
 }
 
-?> 
+?>
