@@ -13,13 +13,20 @@ $route->loadbootstrap('local'); // Loading Bootstrap css
 $route->loadpyscripts('local'); // Loading Pyscripts
 ```
 ## Pages
-All the pages are located in ```sh ./controller/pages```
+All the pages are located in ``` ./controller/pages```
 
 ## Scripts
-All the scripts are located in ```sh ./controller/scripts/```
+All the scripts are located in ``` ./controller/scripts/```
 
 ## Stylesheets
-All the pages are located in ```sh ./controller/styles/```
+All the pages are located in ``` ./controller/styles/```
+
+## Extracomponents
+[Bootstrap](https://getbootstrap.com/)
+[Boxicon](https://boxicons.com/)
+[Jquery](https://jquery.com/)
+[FontAwesome-Icons](https://fontawesome.com/)
+[PyScript](https://pyscript.net/)
 # Installation
 ```sh
 git clone https://github.com/teddyoweh/Routes-Plugin-PHP.git
