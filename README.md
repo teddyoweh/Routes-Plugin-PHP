@@ -45,7 +45,9 @@ All the pages are located in ``` ./controller/styles/```
 - [FontAwesome-Icons](https://fontawesome.com/)
 - [PyScript](https://pyscript.net/)
 
-There are two args when loading the extracomponents ```local``` and ```web```
+There are two args when loading the extracomponents:
+- ```local``` Located in the Local Computer
+- ```web``` Sourced directly from the web
 ```PHP
 <?php
 
