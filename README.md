@@ -27,6 +27,15 @@ All the pages are located in ``` ./controller/styles/```
 - [Jquery](https://jquery.com/)
 - [FontAwesome-Icons](https://fontawesome.com/)
 - [PyScript](https://pyscript.net/)
+
+There are two args when loading the extracomponents ```local``` and ```web```
+```PHP
+<?php
+
+$route->loadbootstrap('local');
+$route->loadpyscripts('local');
+
+```
 # Installation
 ```sh
 git clone https://github.com/teddyoweh/Routes-Plugin-PHP.git
