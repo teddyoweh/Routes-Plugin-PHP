@@ -2,17 +2,24 @@
 This plugin can be embedded in PHP application to give the web application specific routes/href location and for entering specific/locations for each page in a web application
 
 # Usage
+
 ```PHP
 $route = new Route()// // Initializing Routing Plugin
 $route->add($path,$file); // Assigning and Adding Routes/Location to a file for the Web Application;
 $route->error404($file4040); // Adding Page Not Found Route
 $route->addscripts('script.js'); // Loading Script Files
-$route->addstylesheets('style.scss'); Loading Stylesheets
-$route->loadbootstrap('local'); Loading Bootstrap css 
-$route->loadpyscripts('local'); Loading Pyscripts
+$route->addstylesheets('style.scss'); // Loading Stylesheets
+$route->loadbootstrap('local'); // Loading Bootstrap css 
+$route->loadpyscripts('local'); // Loading Pyscripts
 ```
-#Pages
+## Pages
 All the pages are located in ```sh ./controller/pages```
+
+## Scripts
+All the scripts are located in ```sh ./controller/scripts/```
+
+## Stylesheets
+All the pages are located in ```sh ./controller/styles/```
 # Installation
 ```sh
 git clone https://github.com/teddyoweh/Routes-Plugin-PHP.git
