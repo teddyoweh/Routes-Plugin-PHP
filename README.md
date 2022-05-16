@@ -53,6 +53,7 @@ There are two args when loading the extracomponents:
 
 $route->loadbootstrap('local');
 $route->loadpyscripts('local');
+$route->loadfontawesome('web');
 
 ```
 # Installation
@@ -73,6 +74,7 @@ $route->addscripts('script.js');
 $route->addstylesheets('style.scss');
 $route->loadbootstrap('local');
 $route->loadpyscripts('local');
+$route->loadfontawesome('web');
 
 // Routings
 
