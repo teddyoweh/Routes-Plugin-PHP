@@ -3,19 +3,20 @@ This plugin can be embedded in PHP application to give the web application speci
 
 # Usage
 
+## Startup
 ```PHP
 <?php
 require('./controller/routes/routes.php');
 $route = new Route(); 
-
-// Stylesheets and scripts
+```
+## Stylesheets and scripts
+```PHP
 $route->addscripts('script.js');
 $route->addstylesheets('style.scss');
-$route->loadbootstrap('local');
-$route->loadpyscripts('local');
-
-// Routings
-
+``` 
+ 
+## Routings
+```PHP
 // Basic Pages
 $route->homepage('home.php'); // Adding Home Page
 $route->error404('error404.php'); // Adding 404 Error Page
